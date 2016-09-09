@@ -3,8 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Jordan Campbell</title>
+
   </head>
-  <body>
-    <h1>It's a me! Jordan Campbell!</h1>
+  <body ng-app="Site">
+
+    <div class="NavBar">
+      <span>Jordan Campbell</span>
+      <a>
+    </div>
+
+    <div ng-view=""></div>
+
+    <!-- Script initialization -->
+    <link rel="stylesheet" type="text/css" href="styles.css"></link>
+    <script src="/node_modules/angular/angular.js"></script>
+
+    <script src="app.js"></script>
+    <script src="controllers/HomeController.js"></script>
+    <script src="controllers/BlogController.js"></script>
+
   </body>
 </html>

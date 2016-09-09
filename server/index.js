@@ -3,6 +3,7 @@ var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 var _ = require("lodash");
+var path = require("path");
 
 // Create the express app
 var app = express();
@@ -11,6 +12,8 @@ var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(methodOverride("X-HTTP-Method-Override"));
+app.use(express.static(__dirname + "/../client/public"));
+console.log(__dirname + "/../client/public");
 
 // CORS Support
 app.use(function(req, res, next) {

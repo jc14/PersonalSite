@@ -1,5 +1,5 @@
 angular.module("Site", ['ngRoute'])
-  .config(function($routeProvider) {
+  .config(function($routeProvider, $locationProvider) {
     $routeProvider
       .when("/", {
         templateUrl: 'views/home.html',
@@ -12,4 +12,6 @@ angular.module("Site", ['ngRoute'])
       .otherwise({
         redirectTo: '/'
       })
+
+      $locationProvider.html5Mode(true);
   })

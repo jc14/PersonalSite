@@ -1,4 +1,4 @@
-angular.module("Site", [require('angular-route')])
+angular.module("Site", ['ngRoute'])
   .config(function($routeProvider) {
     $routeProvider
       .when("/", {

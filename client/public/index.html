@@ -7,10 +7,19 @@
   </head>
   <body ng-app="Site">
 
-    <div class="NavBar">
-      <span>Jordan Campbell</span>
-      <a href="home">Home</a>
-      <a href="blog">Blog</a>
+    <div class="navBar">
+      <div class="navBarName">
+        <span>Jordan Campbell</span>
+      </div>
+      <div class="navBarPageLinks">
+        <a href="home">Home</a>
+        <a href="blog">Blog</a>
+      </div>
+      <div class="navBarSocialLinks">
+        <a href="https://www.linkedin.com/in/jcampbell14" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png"></a>
+        <a href="https://github.com/jc14" target="_blank"><img src="/images/GitHub-Mark-64px.png"></a>
+        <a href="https://twitter.com/jc1441" target="_blank"><img src="/images/Twitter_Logo_Blue.png"></a>
+      </div>
     </div>
 
     <div ng-view=""></div>

@@ -1,3 +1,50 @@
-.NavBar {
+html, body {
+  margin: 0px;
+  width: 100%;
+}
+
+.navBar div {
+  text-align: center;
+  padding: 0px;
+}
+
+.navBar {
+  background-color: white;
+  box-shadow: 0px .5px 3px 0px black;
+  width: 100%;
+  height: 3em;
+  display: table;
+  padding: 5px;
+}
+
+.navBarName {
+  color: white;
+  font-size: 1.5em;
+  display: table-cell;
+}
+
+.navBarPageLinks {
+  display: table-cell;
+}
+
+.navBarPageLinks a {
+  background-color: red;
+  text-decoration: none;
+}
+
+.navBarPageLinks a:hover {
+  background-color: darkred;
+}
+
+.navBarSocialLinks {
+  display: table-cell;
+}
+
+.navBarSocialLinks a {
   display: inline;
+}
+
+.navBarSocialLinks img {
+  width: 2em;
+  height: 2em;
 }

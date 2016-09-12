@@ -3,5 +3,11 @@
 </div>
 <div class="projectsContainer">
   <h1>Projects</h1>
-  
+  <div ng-repeat="project in projects">
+    <div ng-class="project.title">
+      <h1>{{project.title}}</h1>
+      <img ng-src="images/{{project.thumbnail}}">
+      <p>{{project.description}}</p>
+    </div>
+  </div>
 </div>

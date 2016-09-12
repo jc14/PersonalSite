@@ -1,11 +1,7 @@
 html, body {
   margin: 0px;
   width: 100%;
-}
-
-.navBar div {
-  text-align: center;
-  padding: 0px;
+  background-color: #ddd;
 }
 
 .navBar {
@@ -14,26 +10,41 @@ html, body {
   width: 100%;
   height: 3em;
   display: table;
-  padding: 5px;
+  table-layout: fixed;
+  border-spacing: 0px;
+}
+
+.navBar div {
+  text-align: center;
+  padding: 10px;
 }
 
 .navBarName {
-  color: white;
-  font-size: 1.5em;
+  color: black;
+  font-size: 2em;
   display: table-cell;
+  vertical-align: middle;
 }
 
 .navBarPageLinks {
   display: table-cell;
+  vertical-align: middle;
 }
 
 .navBarPageLinks a {
-  background-color: red;
+  background-color: #fff;
   text-decoration: none;
+  font-size: 1.5em;
+  padding: 5px 10px;
 }
 
 .navBarPageLinks a:hover {
-  background-color: darkred;
+  background-color: #ddd;
+}
+
+.navBarPageLinks a:active {
+  color: #000;
+  background-color: #aaa;
 }
 
 .navBarSocialLinks {
@@ -42,9 +53,31 @@ html, body {
 
 .navBarSocialLinks a {
   display: inline;
+  margin: 0px 5px 0px 5px;
 }
 
 .navBarSocialLinks img {
   width: 2em;
   height: 2em;
+}
+
+/* ======== Home Page ======== */
+.aboutMe {
+  padding-top: 1em;
+  font-size: 3em;
+  width: 45%;
+  margin: auto;
+}
+
+/* ========== Home Page Projects ========== */
+.projectsContainer {
+
+}
+
+.projectsContainer h1 {
+  font-size: 4em;
+  text-align: center;
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
 }

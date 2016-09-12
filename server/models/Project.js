@@ -5,16 +5,20 @@ var ProjectSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
-	header: {
-		type: String,
-		required: true
-	},
-	imageURL: {
-		type: String,
-		required: true
-	},
 	description: {
 		type: String,
+		required: true
+	},
+	thumbnail: {
+		type: String,
+		required: true
+	},
+	colorKey: {
+		type: String,
+		required: true
+	},
+	links: {
+		type: Array,
 		required: true
 	}
 });

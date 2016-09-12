@@ -19,6 +19,27 @@ module.exports = function(app, route) {
     res.send("Project: " + req.params.projectTitle);
   })
 
+  app.post(route, function(req, res) {
+
+    console.log("Request body:", req.body)
+
+    var project = new Project({
+      title: req.body.title,
+      description: req.body.description,
+      thumbnail: req.body.thumbnail,
+      colorKey: req.body.colorKey,
+      links: req.body.links
+    })
+
+    project.save(function(err) {
+      if(err) {
+        console.error(err);
+        res.status(500).end();
+      }
+      res.status(201).end();
+    })
+  })
+
 
   return function(req, res, next){
     next();

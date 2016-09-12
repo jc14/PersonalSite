@@ -9,6 +9,9 @@
       <h1>{{project.title}}</h1>
       <img ng-src="images/{{project.thumbnail}}">
       <p>{{project.description}}</p>
+      <div class="projectLinks" ng-repeat="link in project.links">
+        <a ng-href="{{link.url}}" target="_blank">{{link.text}}</a>
+      </div>
     </div>
   </div>
 </div>

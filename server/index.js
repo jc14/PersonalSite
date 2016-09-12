@@ -24,7 +24,8 @@ app.use(function(req, res, next) {
 });
 
 // Connect to Mongo Database
-mongoose.connect('mongodb://localhost/site');
+var secretCreds = require("../secret/mlabcreds");
+mongoose.connect(secretCreds.uri);
 mongoose.connection.once('open', function() {
 
 	// Load models

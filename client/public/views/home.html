@@ -1,10 +1,11 @@
 <div class="aboutMe">
-  I have been developing Unity games and other applications C# for the past 3 years. Now, after graduating MakerSquare, I'm starting my career as a Software Engineer.
+  <h1>About me</h1>
+  I have been developing Unity games and other C# applications for the past 3 years. Now, after graduating MakerSquare, I'm starting my career as a Software Engineer.
 </div>
 <div class="projectsContainer">
   <h1>Projects</h1>
   <div ng-repeat="project in projects">
-    <div ng-class="project.title">
+    <div ng-class="project.title" ng-style="{'background-color': '#{{project.colorKey}}'}">
       <h1>{{project.title}}</h1>
       <img ng-src="images/{{project.thumbnail}}">
       <p>{{project.description}}</p>

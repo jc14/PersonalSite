@@ -2,6 +2,7 @@ html, body {
   margin: 0px;
   width: 100%;
   background-color: #ddd;
+  font-family: monospace;
 }
 
 .navBar {
@@ -63,10 +64,15 @@ html, body {
 
 /* ======== Home Page ======== */
 .aboutMe {
-  padding-top: 1em;
+  padding-top: .5em;
   font-size: 3em;
   width: 45%;
   margin: auto;
+}
+
+.aboutMe h1 {
+  text-align: center;
+  margin: 0px;
 }
 
 /* ========== Home Page Projects ========== */
@@ -74,7 +80,7 @@ html, body {
 
 }
 
-.projectsContainer h1 {
+.projectsContainer > h1 {
   font-size: 4em;
   text-align: center;
   margin-bottom: 0px;

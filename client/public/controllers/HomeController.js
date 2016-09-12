@@ -5,6 +5,7 @@ angular.module("Site")
       method: "GET",
       url: "/projects"
     }).then(function(response) {
+      // {'background-color': #{{project.colorKey}}
       $scope.projects = response.data;
     })
   })

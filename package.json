@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/jc14/PersonalSite.git"
   },
+  "engines":{"node":"6.3.0"},
   "author": "Jordan Campbell",
   "license": "ISC",
   "bugs": {

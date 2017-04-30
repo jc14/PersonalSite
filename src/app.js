@@ -5,17 +5,14 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Main from './main.jsx';
 
 import {
-    indigo500,
-    indigo700,
-    cyan400,
-    black,
-} from 'material-ui/styles/colors';
+    colors
+} from 'material-ui/styles';
 
 let muiTheme = getMuiTheme({
     palette: {
-        primary1Color: indigo500,
-        primary2Color: indigo700,
-        accent1Color: cyan400,
+        primary1Color: colors.indigo500,
+        primary2Color: colors.indigo700,
+        accent1Color: colors.cyan400,
     }
 });
 

@@ -58,7 +58,9 @@ export default class Main extends React.Component {
 
     render () {
         return (
-            <div>
+            <div style={{
+                backgroundColor: '#eeeeee'
+            }} >
                 <AppBar
                     title={'Jordan Campbell'}
                     iconElementRight={ <Buttons /> }

@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Main from './main.jsx';
 
-/* --- VIEWS --- */
-import Home from './views/Home.jsx';
+const App = () => (
+    <MuiThemeProvider>
+        <Main />
+    </MuiThemeProvider>
+);
 
-ReactDOM.render(<Home />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'))

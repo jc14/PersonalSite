@@ -1,4 +1,5 @@
 node_modules
 secret
 bundle.js
+bundle.js.map
 .vscode

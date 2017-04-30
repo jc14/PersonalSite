@@ -8,7 +8,8 @@
     "start": "node server/index.js",
     "nodemon": "nodemon server/index.js",
     "start_dev_server": "webpack-dev-server --content-base public",
-    "watch": "webpack --progress --colors --watch"
+    "watch": "webpack --progress --colors --watch",
+    "build_bundles": "webpack --progress --colors"
   },
   "repository": {
     "type": "git",

@@ -15,45 +15,22 @@ import {
 import ContactMail from 'material-ui/svg-icons/communication/contact-mail';
 
 /* --- VIEWS --- */
-import Home from './views/Home.jsx';
-import Blog from './views/Blog.jsx';
+import Home from './Home.jsx';
+import Blog from './Blog.jsx';
 
-const buttonStyle = {
-  margin: 12
-}
-
-const Buttons = () => (
-  <div>
-    <RaisedButton
-      label="GitHub"
-      style={buttonStyle}
-      href="https://github.com/jc14"
-      target="_blank"
-    />
-    <RaisedButton
-      label="LinkedIn"
-      style={buttonStyle}
-      href="https://www.linkedin.com/in/jcampbell14"
-      target="_blank"
-    />
-    <RaisedButton
-      label="Twitter"
-      style={buttonStyle}
-      href="https://twitter.com/jc1441"
-      target="_blank"
-    />
-  </div>
-);
+import Buttons from '../components/Buttons.jsx';
 
 export default class Main extends React.Component {
-
-  constructor (props) {
-    super(props);
+  constructor () {
+    super();
     injectTapEventPlugin();
 
     this.state = {
       modalOpen: false
     };
+
+    this.handleModalClose = this.handleModalClose.bind(this);
+    this.handleModalOpen = this.handleModalOpen.bind(this);
   }
 
   handleModalOpen () {
@@ -70,7 +47,7 @@ export default class Main extends React.Component {
       <RaisedButton 
         label="Close"
         primary={true}
-        onTouchTap={this.handleModalClose.bind(this)}
+        onTouchTap={this.handleModalClose}
       />
     ]
 
@@ -81,7 +58,7 @@ export default class Main extends React.Component {
           iconElementRight={ <Buttons /> }
           iconElementLeft={
           <IconButton
-            onTouchTap={this.handleModalOpen.bind(this)}
+            onTouchTap={this.handleModalOpen}
           >
             <ContactMail color='white' />
           </IconButton>
@@ -91,7 +68,7 @@ export default class Main extends React.Component {
           actions={actions}
           modal={false}
           open={this.state.modalOpen}
-          onRequestClose={this.handleModalClose.bind(this)}
+          onRequestClose={this.handleModalClose}
           >
           Email: jcampbell1441@gmail.com
         </Dialog>

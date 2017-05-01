@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import Main from './main.jsx';
-
 import {
+  MuiThemeProvider,
+  getMuiTheme,
   colors
 } from 'material-ui/styles';
+
+import Main from './views/Main.jsx';
 
 let muiTheme = getMuiTheme({
   palette: {

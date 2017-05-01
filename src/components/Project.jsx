@@ -10,7 +10,6 @@ import {
 } from 'material-ui';
 
 export default class Project extends React.Component {
-
   render () {
 
     let id = 0;

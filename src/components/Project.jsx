@@ -5,9 +5,7 @@ import {
   CardHeader,
   CardMedia,
   CardTitle,
-  CardText
-} from 'material-ui/Card';
-import {
+  CardText,
   RaisedButton
 } from 'material-ui';
 

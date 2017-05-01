@@ -3,7 +3,10 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import {
     AppBar,
     Avatar,
-    RaisedButton
+    RaisedButton,
+    IconButton,
+    Dialog,
+    Paper
  } from 'material-ui';
  import {
     Toolbar,
@@ -13,6 +16,7 @@ import {
      Tabs, 
      Tab
  } from 'material-ui/Tabs';
+ import ContactMail from 'material-ui/svg-icons/communication/contact-mail';
 
 import {
     BrowserRouter as Router,
@@ -51,21 +55,82 @@ const buttonStyle = {
  );
 
 export default class Main extends React.Component {
+    
     constructor (props) {
         super(props);
         injectTapEventPlugin();
+
+        this.state = {
+            modalOpen: false
+        };
     }
 
+    handleModalOpen () {
+        this.setState({modalOpen: true});
+    };
+
+    handleModalClose () {
+        this.setState({modalOpen: false});
+    };
+
     render () {
+
+        const actions = [
+            <RaisedButton 
+                label="Close"
+                primary={true}
+                onTouchTap={this.handleModalClose.bind(this)}
+            />
+        ]
+
         return (
             <div style={{
-                backgroundColor: '#eeeeee'
+                
             }} >
                 <AppBar
                     title={'Jordan Campbell'}
                     iconElementRight={ <Buttons /> }
+                    iconElementLeft={
+                        <IconButton
+                            onTouchTap={this.handleModalOpen.bind(this)}
+                        >
+                            <ContactMail color='white' />
+                        </IconButton>
+                    }
                 />
-                <Tabs>
+                <Dialog
+                    actions={actions}
+                    modal={false}
+                    open={this.state.modalOpen}
+                    onRequestClose={this.handleModalClose.bind(this)}
+                >
+                    Please email me here: jcampbell1441@gmail.com
+                </Dialog>
+                <Paper
+                    style={{
+                        width: '65%',
+                        textAlign: 'center',
+                        margin: '5px auto',
+                        fontSize: '26px'
+                    }} 
+                >
+                    <Avatar 
+                        src={__dirname + 'images/Profile_Avatar.png'}
+                        size={150}
+                        style={{ margin: '0 auto' }}
+                    />
+                    <p
+                        style={{ margin: '0' }}
+                    >
+                        I started programming in college with a computer science major then took the knowledge I gained there and started a game development startup called Ignition Studios. I have been building games in Unity and C# for almost 4 years now. I have almost 1 year of web development experience after graduating Makersquare/Hack Reactor and currently work at InMotion Software.
+                    </p>
+                </Paper>
+                <Tabs
+                    style={{
+                        width: '65%',
+                        margin: '0 auto'
+                    }}
+                >
                     <Tab label="Projects">
                         <Home />
                     </Tab>

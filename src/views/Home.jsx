@@ -43,10 +43,7 @@ export default class Home extends React.Component {
     });
 
     return (
-      <div style={{
-        width: '60%',
-        margin: '0px auto'
-      }} >
+      <div>
         {projectsComponents}
       </div>
     )

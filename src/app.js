@@ -16,7 +16,7 @@ let muiTheme = getMuiTheme({
     }
 });
 
-muiTheme.tabs.backgroundColor = muiTheme.palette.primary2Color;
+muiTheme.tabs.backgroundColor = muiTheme.palette.primary1Color;
 
 const App = () => (
     <MuiThemeProvider muiTheme={muiTheme}>
